@@ -60,14 +60,12 @@ window.onload = function() {
       "when I was peeing"
     ];
 
-    //The variable names change?
+    let whoRandom = who[Math.floor(Math.random() * who.length)];
+    let actionRandom = action[Math.floor(Math.random() * action.length)];
+    let whatRandom = what[Math.floor(Math.random() * what.length)];
+    let whenRandom = when[Math.floor(Math.random() * when.length)];
 
-    let whoInx = Math.floor(Math.random() * who.length);
-    let actionInx = Math.floor(Math.random() * action.length);
-    let whatInx = Math.floor(Math.random() * what.length);
-    let whenInx = Math.floor(Math.random() * when.length);
-
-    return `${who[whoInx]} ${action[actionInx]} ${what[whatInx]} ${when[whenInx]}`;
+    return `${whoRandom} ${actionRandom} ${whatRandom} ${whenRandom}`;
   };
   document.querySelector("#excuse").innerHTML = excuseGenerator();
 };
